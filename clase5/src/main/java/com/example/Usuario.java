@@ -1,8 +1,9 @@
-package com.example;
+
  import java.util.ArrayList;
 import java.util.List;
 
-public class Usuario {
+public class Usuario {git status
+
     // Atributos
     private int id;
     private String nombre;
@@ -84,4 +85,4 @@ public class Usuario {
 }
 
 
-}
+git add clase5/src/main/java/com/example/Usuario.java
