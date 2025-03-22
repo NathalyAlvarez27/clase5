@@ -1,7 +1,7 @@
 package com.example;
 
-public class Prestamo {
-    import java.time.LocalDate;
+// Importaciones deben ir antes de la declaración de la clase
+import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class Prestamo {
@@ -60,15 +60,16 @@ public class Prestamo {
         return 0;
     }
 
-    // Método toString() para mostrar información del préstamo
+    // Método toString() corregido para evitar NullPointerException
     @Override
     public String toString() {
-        return "Libro: " + libro.getTitulo() + "\n" +
-               "Usuario: " + usuario.getNombre() + "\n" +
+        String tituloLibro = (libro != null) ? libro.getTitulo() : "Desconocido";
+        String nombreUsuario = (usuario != null) ? usuario.getNombre() : "Desconocido";
+
+        return "Libro: " + tituloLibro + "\n" +
+               "Usuario: " + nombreUsuario + "\n" +
                "Fecha de Préstamo: " + fechaPrestamo + "\n" +
                "Fecha de Devolución Prevista: " + fechaDevolucionPrevista;
     }
 }
 
-
-}
